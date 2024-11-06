@@ -1,0 +1,67 @@
+@font-face{
+    font-family:digital-7 ;
+    src: url(../countdown/style.css/font/digital-7.ttf);
+}
+:root{
+    --light-color:rgb(234,32,39)
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #cad3c8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    gap: 50px;     
+    /* flatui2 */
+}
+h2{
+    color: #000000;
+    font-size: 50px;
+    font-weight: 400;
+}
+.frame{
+    width: 600px;
+    height: 300px;
+    background-color: #3b2e2e;
+    border: 50px solid #344769;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+    font-size: 60px;
+    text-align: center;
+    line-height: 180px;
+    
+}
+.clock{
+    font-family: digital-7;
+    text-shadow: 0 0 20px var(--light-color) ;
+    position: relative;
+    color: #fff;
+
+}
+.clock::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 128px;
+    top: 0;
+    filter: blur(15px);
+}
+.clock::before{
+    content:'' ;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--light-color);
+}
